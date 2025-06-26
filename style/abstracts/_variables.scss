@@ -1,0 +1,19 @@
+@use "sass:color";
+
+$desktop-breakpoint: 1024px;
+$compact-navbar-breakpoint: 525px;
+
+$navbar-height: 60px;
+$navbar-bg-color: #fff;
+$navbar-hover-bg-color: color.adjust($navbar-bg-color, $lightness: -10%);
+
+$text-mobile: #fff;
+$text-desktop: #333;
+$font-stack: "Helvetica", sans-serif;
+
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+$mobile-overlay: rgba(0, 0, 0, 0.75);
+
+$innovation-bg: "/innovation2.png";
+$development-bg: "/development.webp";
+$technician-bg: "/technician.webp";

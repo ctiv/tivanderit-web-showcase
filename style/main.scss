@@ -1,0 +1,18 @@
+@use 'abstracts/variables' as *;
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/navbar';
+@import 'components/footer';
+@import 'pages/home';
+
+main {
+  margin-top: $navbar-height;
+}
+
+nav .dev-mode {
+  color: #fff;
+  margin-left: 10px;
+  padding: 5px 15px;
+  background: #8B0000;
+}

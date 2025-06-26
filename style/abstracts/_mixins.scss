@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+// Media query mixin
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin compact-navbar {
+  @media (min-width: $compact-navbar-breakpoint) {
+    @content;
+  }
+}
+
+// Background image mixin
+@mixin bg-image($url, $position: center, $repeat: no-repeat, $size: cover) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+// Overlay mixin
+@mixin overlay($color: $mobile-overlay, $z-index: 1) {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $color;
+    z-index: $z-index;
+  }
+}
+
+// Card style placeholder
+@mixin card {
+  box-shadow: $card-shadow;
+  overflow: hidden;
+
+  @include desktop {
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "end2end",
+  "version": "1.1.2",
+  "description": "End to end tests for Tivander IT's website.",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Tivander IT AB",
+  "devDependencies": {
+    "@playwright/test": "1.52.0",
+    "@types/node": "22.14.0",
+    "typescript": "5.8.2"
+  },
+  "engines": {
+    "node": "22.14.0"
+  }
+}

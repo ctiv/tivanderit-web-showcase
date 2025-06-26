@@ -1,0 +1,105 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+#about {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  padding-top: 0;
+
+  h2 {
+    font-family: $font-stack;
+    color: $text-desktop;
+    background: #fff;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .card {
+    background: #fff;
+    @include card;
+    width: 100%;
+
+    .card-image {
+      width: 100%;
+      min-height: min(55vh, 75vw);
+      @include bg-image($innovation-bg);
+    }
+
+    .card-text {
+      padding: 0 2rem 1.5rem;
+      color: $text-desktop;
+      font-family: $font-stack;
+
+      h3,
+      p {
+        margin: 0;
+        padding-top: 9px;
+      }
+
+      h3 {
+        transform: translateY(-50%);
+        background: #fff;
+        border-radius: 20px;
+      }
+
+      ul {
+        list-style: disc inside;
+        text-align: start;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  // Override backgrounds for specific cards regardless of screen size.
+  #development .card-image {
+    @include bg-image($development-bg);
+  }
+
+  #technician .card-image {
+    @include bg-image($technician-bg);
+  }
+
+  @include desktop {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem calc(2rem + 10px) 0;
+    display: grid;
+    gap: 0 5rem;
+
+    h2 {
+      grid-row: 1;
+      grid-column: 1 / span 2;
+      text-align: start;
+      background: none;
+      padding: 0;
+      margin: 0 0 1rem;
+      position: static;
+      transform: none;
+    }
+
+    .card {
+      grid-row: 2;
+      max-width: 500px;
+      margin: 2rem auto;
+
+      .card-image {
+        // Fix height on large screens:
+        min-height: 230px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[[language]]
+auto-format = true
+name = "rust"
+
+[language.formatter]
+command = "leptosfmt"
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = [ "ssr", "hydrate" ]
